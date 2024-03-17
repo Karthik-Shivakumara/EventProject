@@ -1,0 +1,54 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}
+
+        {% endblock %}
+    </title>
+    <!-- CDNS -->
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+<style>
+	nav {
+		background-color: rgb(255, 255, 255);
+		height: 65px;
+	}
+  .nav li a{
+    color:rgb(132, 0, 255);
+    font-size: 30px;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  }
+  .navbar-brand{
+    color: rgb(0, 0, 0);
+    font-size: 46px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+</style>
+</head>
+<body>
+    <!-- navbar start -->
+    <nav class="navbar">
+		<div class="container-fluid ">
+			<div class="navbar-header "><a class="navbar-brand" href="/">Event Management</a></div>
+			<ul class="nav navbar-nav mx-auto">
+				<li class="active"><a href="{% url 'index' %}">Home</a></li>
+				<li class="events"><a href="{% url 'events' %}">Events</a></li>
+				<li class="booking"><a href="{% url 'booking' %}">Booking</a></li>
+				<li class="adminupdate"><a href="{% url 'admin_update' %}">Update Booking</a></li>
+				<li class="admin"><a href="{% url 'admin' %}">Admin Page</a></li>
+			</ul>
+		</div>
+	</nav>
+</body>
+</html>
+{%block content%}
+
+{% endblock %}
